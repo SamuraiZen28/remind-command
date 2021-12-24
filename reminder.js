@@ -15,11 +15,11 @@ module.exports = {
         let oneday = 86400000
         let time = args[0]
         let reason = args.slice(1).join(" ")
-        const sucem = new MessageEmbed().setDescription(`\`✅ Done!\` **Remind: ${reason} in an ${time}**`).setColor(i.nocolor).setTimestamp()
-        const remind = new MessageEmbed().setDescription(`<@!${message.author.id}> **Reminder: ${reason}**`).setColor(i.nocolor)
+        const sucem = new MessageEmbed().setDescription(`\`✅ Done!\` **Remind: ${reason} in an ${time}**`).setColor("#2f3136").setTimestamp()
+        const remind = new MessageEmbed().setDescription(`<@!${message.author.id}> **Reminder: ${reason}**`).setColor("#2f3136")
         if(!reason) {
             message.reply(`\`❌ Please specify something for me to remind you!\``)
-        } else if(!time) {
+        } else if(!time) 
             message.reply(`\`No time specified\``)
         } else if(args[0] === 'oneday') {
             message.reply(sucem).then(() => {
